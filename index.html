@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Александра Овчарова | Сценарист & Нарративный дизайнер</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Montserrat:wght@300;400;700;900&family=JetBrains+Mono&display=swap');
+        
+        body {
+            background-color: #f4f4f9;
+            background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+            font-family: 'Montserrat', sans-serif;
+            color: #1a1a1a;
+            overflow-x: hidden;
+        }
+
+        .handwritten { font-family: 'Caveat', cursive; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+
+        .paper-card {
+            background: white;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .polaroid {
+            background: white;
+            padding: 10px 10px 30px 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transform: rotate(-2deg);
+            transition: all 0.3s ease;
+            position: relative;
+            display: block;
+        }
+
+        .polaroid img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .polaroid:hover {
+            transform: rotate(0deg) scale(1.05);
+            z-index: 10;
+            box-shadow: 0 15px 30px rgba(139, 92, 246, 0.2);
+        }
+
+        .clip {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            z-index: 20;
+            filter: drop-shadow(0 2px 2px rgba(0,0,0,0.1));
+        }
+
+        .tape {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(2px);
+            width: 80px;
+            height: 25px;
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            transform: rotate(-15deg);
+            border-left: 1px dashed rgba(0,0,0,0.1);
+            border-right: 1px dashed rgba(0,0,0,0.1);
+        }
+
+        .vn-button {
+            background: linear-gradient(180deg, #ff79c6 0%, #bd93f9 100%);
+            border: 4px solid #fff;
+            box-shadow: 0 6px 0 #6272a4;
+            color: white;
+            padding: 18px 45px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.1s;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            border-radius: 4px;
+        }
+
+        .vn-button:active {
+            transform: translateY(4px);
+            box-shadow: 0 2px 0 #6272a4;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            border: 12px solid white;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            background: #000;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+        }
+
+        .section-tag {
+            font-size: 10px; font-weight: 900; letter-spacing: 0.3em; text-transform: uppercase; color: #bd93f9;
+        }
+    </style>
+</head>
+<body class="selection:bg-violet-200">
+
+    <header class="max-w-6xl mx-auto px-6 pt-24 pb-16 flex flex-col md:flex-row gap-16 items-center">
+        <div class="relative w-72 md:w-96 flex-shrink-0">
+            <img src="https://i.postimg.cc/mrbkkVN0/SASHA.jpg" class="hidden" alt="hidden-pre-load">
+            <svg viewBox="0 0 100 100" class="clip fill-gray-400"><path d="M50 0 L60 20 L40 20 Z" /></svg> 
+            <div class="polaroid" style="transform: rotate(-3deg);">
+                <div class="tape"></div>
+                <img src="https://i.postimg.cc/mrbkkVN0/SASHA.jpg" alt="Александра Овчарова">
+                <p class="handwritten text-center mt-6 text-2xl text-gray-700">Александра, 26 лет</p>
+            </div>
+        </div>
+
+        <div class="flex-grow">
+            <p class="section-tag mb-4">// System.init(Aleksandra)</p>
+            <h1 class="text-6xl md:text-8xl font-black tracking-tighter mb-6 text-gray-900 leading-none">
+                АЛЕКСАНДРА <br/> <span class="text-violet-500">ОВЧАРОВА</span>
+            </h1>
+            <div class="flex flex-wrap gap-2 mb-8">
+                <span class="mono bg-black text-white px-3 py-1 text-[10px] uppercase">Сценарист</span>
+                <span class="mono bg-violet-100 text-violet-700 px-3 py-1 text-[10px] uppercase border border-violet-200">Нарративный дизайнер</span>
+                <span class="mono bg-gray-100 text-gray-600 px-3 py-1 text-[10px] uppercase border border-gray-200">Project Manager</span>
+            </div>
+            <p class="text-lg leading-relaxed text-gray-700 max-w-2xl mb-8 italic">
+                Мой путь начался с золотой медали и музыкальной школы. Бакалавр юриспруденции <b>УрГЮУ</b>. 
+                6 лет управления IT-проектами в <b>Контуре</b> и <b>Альфа-сервисе</b> научили меня дисциплине, которую я теперь направляю в создание эмоциональных сюжетов.
+            </p>
+            <div class="flex flex-col gap-2 text-sm font-bold text-gray-400">
+                <span class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i> mrshrsvr@gmail.com</span>
+                <span class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> +7 (991) 309-48-78</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="max-w-4xl mx-auto px-6 py-20">
+        <div class="mb-12 text-center">
+            <h2 class="text-3xl font-black uppercase mb-2 tracking-tighter italic">Storytelling Skills</h2>
+            <p class="handwritten text-2xl text-violet-600">Навык работы с визуальной частью</p>
+        </div>
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/08CgopG2oGA" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section class="bg-violet-600 text-white py-24 my-20 transform -rotate-1 shadow-2xl">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row gap-16 items-center transform rotate-1">
+            <div class="md:w-1/2">
+                <p class="mono text-xs uppercase mb-4 opacity-60">Master Project</p>
+                <h2 class="text-5xl md:text-6xl font-black mb-6 uppercase leading-tight italic underline">Проект NOX</h2>
+                <p class="text-xl mb-10 opacity-90 leading-relaxed font-light">
+                    Авторская вселенная. Иерархия, социальные законы и механики взаимодействия. Целостный сюжет и логика мира.
+                </p>
+                <div class="grid grid-cols-1 gap-3">
+                    <a href="https://teletype.in/@noxroleplayadm/T7ay_7dqJ-0#TvHn" target="_blank" class="flex items-center justify-between bg-white/10 hover:bg-white/20 p-4 border border-white/20 transition-all text-sm font-bold uppercase tracking-wider">
+                        Концепты лора: Иерархия <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                    </a>
+                    <a href="https://teletype.in/@noxroleplayadm/FgAa0MMNhjp" target="_blank" class="flex items-center justify-between bg-white/10 hover:bg-white/20 p-4 border border-white/20 transition-all text-sm font-bold uppercase tracking-wider">
+                        Концепты лора: Социум <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                    </a>
+                    <a href="https://teletype.in/@noxroleplayadm/ZPkjbSNgH5i" target="_blank" class="flex items-center justify-between bg-white/10 hover:bg-white/20 p-4 border border-white/20 transition-all text-sm font-bold uppercase tracking-wider">
+                        Концепты лора: Механики <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                    </a>
+                    <a href="https://teletype.in/@noxroleplayadm/Fakphcb8kmf" target="_blank" class="flex items-center justify-between bg-white/10 hover:bg-white/20 p-4 border border-white/20 transition-all text-sm font-bold uppercase tracking-wider">
+                        Изучить детали мира <i data-lucide="book-open" class="w-4 h-4"></i>
+                    </a>
+                    <a href="https://docs.google.com/document/d/1-rShk6zpl0UQy4QhLnRN33KLBR4gbui0QzySpnWXO4Q/edit?usp=sharing" target="_blank" class="flex items-center justify-between bg-white/30 p-4 border border-white transition-all text-sm font-bold uppercase tracking-wider text-white">
+                        Читать основной сюжет <i data-lucide="file-text" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 relative">
+                <div class="polaroid text-gray-800" style="transform: rotate(4deg);">
+                    <img src="https://i.postimg.cc/SKq28mqZ/NOXMAINGIRL.png" alt="Селина Вейл">
+                    <p class="handwritten text-center mt-4 text-xl">Селина Вейл (Main Heroine)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-6 py-20">
+        <h2 class="text-4xl font-black uppercase text-center tracking-tighter mb-4">Действующие лица</h2>
+        <p class="text-center handwritten text-2xl text-violet-500 mb-16 italic">Уникальные персонажи для сюжета</p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+            <a href="https://telegra.ph/Li-Suhek-10-02" target="_blank" class="polaroid">
+                <img src="https://i.postimg.cc/bNW1GXsb/NOXMALE2.jpg" alt="Каспиан Нокс">
+                <p class="font-bold text-gray-800 mt-4 text-center">Каспиан Нокс</p>
+                <p class="handwritten text-violet-500 text-center text-lg italic">Ли Сухек</p>
+            </a>
+            <a href="https://telegra.ph/So-Jedzhi-10-02" target="_blank" class="polaroid" style="transform: rotate(3deg);">
+                <img src="https://i.postimg.cc/B6SFW4VF/NOXHIGHT.jpg" alt="Серена Нокс">
+                <p class="font-bold text-gray-800 mt-4 text-center">Серена Нокс</p>
+                <p class="handwritten text-violet-500 text-center text-lg italic">Чхве Йеджи</p>
+            </a>
+            <a href="https://telegra.ph/Kim-Kibom-10-04" target="_blank" class="polaroid" style="transform: rotate(-4deg);">
+                <img src="https://i.postimg.cc/0yzZ3dJF/NOXMALE1.jpg" alt="Киан Рейн">
+                <p class="font-bold text-gray-800 mt-4 text-center">Киан Рейн</p>
+                <p class="handwritten text-violet-500 text-center text-lg italic">Ким Кибом</p>
+            </a>
+            <a href="https://telegra.ph/EHmili-Pak-10-05" target="_blank" class="polaroid" style="transform: rotate(2deg);">
+                <img src="https://i.postimg.cc/MKMQJsd3/NOXEMILY.jpg" alt="Эмили Пак">
+                <p class="font-bold text-gray-800 mt-4 text-center">Эмили Пак</p>
+                <p class="handwritten text-violet-500 text-center text-lg italic">Студентка</p>
+            </a>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-6 py-20 border-t border-gray-100">
+        <h2 class="text-2xl font-black mb-12 uppercase italic underline decoration-violet-500 decoration-4 tracking-widest">Архив миров</h2>
+        <div class="grid md:grid-cols-2 gap-10">
+            <div class="paper-card p-10 relative overflow-hidden group">
+                <div class="tape" style="left: -10px;"></div>
+                <h3 class="text-2xl font-black mb-4">Проект RENOM</h3>
+                <p class="text-gray-600 text-sm mb-6 leading-relaxed italic">Мир социального рейтинга, где лайки имеют юридическую силу. Столица интриг под безупречным куполом.</p>
+                <div class="flex items-center gap-4 text-[10px] mono opacity-40 uppercase tracking-[0.3em]">
+                    <i data-lucide="lock" class="w-3 h-3"></i> Archive Locked
+                </div>
+            </div>
+            
+            <div class="paper-card p-10 relative overflow-hidden group bg-slate-900 text-white">
+                <div class="absolute top-0 right-0 p-4 opacity-10">
+                    <i data-lucide="fingerprint" class="w-20 h-20"></i>
+                </div>
+                <h3 class="text-2xl font-black mb-4 text-red-500 italic">IIM: Memento Mori</h3>
+                <p class="text-gray-300 text-sm mb-6 leading-relaxed">
+                    Детективный нуар. Серийный убийца Мори возвращается спустя 2 года. 
+                    Жертвы — девушки 20-30 лет. Раскройте тайну городка, пока не стало поздно.
+                </p>
+                <div class="flex items-center gap-2 text-[10px] mono text-red-400 uppercase font-bold tracking-widest animate-pulse">
+                    <i data-lucide="search" class="w-3 h-3"></i> Investigation Active
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-6 py-20 bg-white/50 border-y border-gray-100">
+        <div class="max-w-3xl mx-auto text-center mb-16">
+            <h2 class="text-2xl font-bold italic mb-6">«Я умею бережно вписывать новых героев в уже существующие вселенные, соблюдая их канон и атмосферу»</h2>
+            <p class="section-tag italic">Галерея прочих героев</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+            <a href="https://overcomp-rplay.weblium.site/characters" target="_blank" class="polaroid text-gray-800">
+                <img src="https://i.postimg.cc/SsHznCKL/Znimok-ekрана-2026-03-13-o-21-07-57.png" alt="Overcomp">
+                <p class="font-bold mt-4 text-center">Кейс Overcomp</p>
+                <p class="mono text-[10px] text-center opacity-50 uppercase mt-1">Open Characters Site</p>
+            </a>
+            <a href="https://alma.weblium.site/jing-xianshu-profile" target="_blank" class="polaroid text-gray-800" style="transform: rotate(2deg);">
+                <img src="https://i.postimg.cc/SsnMQDk3/ALMA.jpg" alt="ALMA">
+                <p class="font-bold mt-4 text-center">Кейс ALMA</p>
+                <p class="mono text-[10px] text-center opacity-50 uppercase mt-1">Open Profile Site</p>
+            </a>
+        </div>
+        <p class="text-center text-xs text-gray-400 mt-12 italic">К сожалению, к остальным работам доступ утерян из-за блокировки площадок.</p>
+    </section>
+
+    <footer class="py-32 text-center bg-white border-t border-gray-100 mt-20 relative">
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-violet-500 via-pink-500 to-blue-500"></div>
+        <div class="relative z-10 px-6">
+            <p class="handwritten text-3xl text-violet-600 mb-6">Конец главы. Начало проекта?</p>
+            <h2 class="text-4xl md:text-7xl font-black mb-12 uppercase tracking-tighter text-gray-900 leading-none italic">
+                ДАВАЙТЕ НАЧНЕМ <br/> <span class="underline decoration-pink-500">НОВУЮ ИСТОРИЮ</span>
+            </h2>
+
+            <a href="https://t.me/bitchimadonna" target="_blank" class="vn-button group scale-110">
+                <i data-lucide="send" class="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                ОБСУДИТЬ ПРОЕКТ
+                <span class="ml-2 animate-pulse">_</span>
+            </a>
+
+            <div class="mt-20 flex flex-col md:flex-row justify-center items-center gap-8 text-sm font-bold tracking-widest text-gray-400">
+                <a href="mailto:mrshrsvr@gmail.com" class="hover:text-violet-600 transition-colors underline decoration-dotted">MRSHRSVR@GMAIL.COM</a>
+                <span class="hidden md:block opacity-20">|</span>
+                <span>+7 (991) 309-48-78</span>
+                <span class="hidden md:block opacity-20">|</span>
+                <a href="https://t.me/bitchimadonna" class="hover:text-blue-500 transition-colors">TELEGRAM</a>
+            </div>
+            
+            <p class="mt-16 text-[9px] mono uppercase opacity-20 tracking-[1em]">
+                Ovcharova Narrative Design &copy; 2026
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
